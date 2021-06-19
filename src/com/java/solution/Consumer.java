@@ -14,9 +14,12 @@ public class Consumer implements Runnable {
 	public void run() {
 		while (true) {
 			try {
-				Thread.sleep(3000);
+				Thread.sleep(1000);
+				long start = System.currentTimeMillis();
 				Employee employee = obj.take();
-					System.out.println("Consumed:<< id="+ employee.getId() +" queueSize---->"+ obj.size());
+				long end = System.currentTimeMillis();
+				System.out.println("Waiting for producer: "+ (end-start)/1000 +"sec");
+				System.out.println("Consumed:<< id="+ employee.getId() +" queueSize---->"+ obj.size());
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
