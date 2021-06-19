@@ -1,62 +1,62 @@
-Output of the above program in which the producer is faster than consumer. As soon as the producer fill the queue to its max size 10 here, producer has to wait for the consumer.
+Output of the above program in which the consumer is faster than producer. As soon as the producer produces an object into the queue, it is consumed by the fast consumer, making the effective queue size to 0.
 
 Produced:>> id=0 queueSize---->0
-Produced:>> id=1 queueSize---->1
-Consumed:<< id=0 queueSize---->1
-Produced:>> id=2 queueSize---->1  // producing fast
-Produced:>> id=3 queueSize---->2  // producing fast
-Produced:>> id=4 queueSize---->3  // producing fast
-Consumed:<< id=1 queueSize---->3
-Produced:>> id=5 queueSize---->3
-Produced:>> id=6 queueSize---->4
-Produced:>> id=7 queueSize---->5
-Consumed:<< id=2 queueSize---->5
-Produced:>> id=8 queueSize---->5
-Produced:>> id=9 queueSize---->6
-Produced:>> id=10 queueSize---->7
-Consumed:<< id=3 queueSize---->7
-Produced:>> id=11 queueSize---->7
-Produced:>> id=12 queueSize---->8
-Produced:>> id=13 queueSize---->9
-Consumed:<< id=4 queueSize---->9
-Produced:>> id=14 queueSize---->9
-Produced:>> id=15 queueSize---->10  // The point at which queue is full. Now producer has to wait till consumer consumes and makes at least one slot available in queue.
-Consumed:<< id=5 queueSize---->9
-Produced:>> id=16 queueSize---->10  // producing slow
-Consumed:<< id=6 queueSize---->9
-Produced:>> id=17 queueSize---->10  // producing slow
-Consumed:<< id=7 queueSize---->9
-Produced:>> id=18 queueSize---->10
-Consumed:<< id=8 queueSize---->9
-Produced:>> id=19 queueSize---->10
-Consumed:<< id=9 queueSize---->9
-Produced:>> id=20 queueSize---->10
-Consumed:<< id=10 queueSize---->9
-Produced:>> id=21 queueSize---->10
-Consumed:<< id=11 queueSize---->9
-Produced:>> id=22 queueSize---->10
-Consumed:<< id=12 queueSize---->9
-Produced:>> id=23 queueSize---->10
-Consumed:<< id=13 queueSize---->9
-Produced:>> id=24 queueSize---->10
-Consumed:<< id=14 queueSize---->10
-Produced:>> id=25 queueSize---->10
-Consumed:<< id=15 queueSize---->9
-Produced:>> id=26 queueSize---->10
-Consumed:<< id=16 queueSize---->9
-Produced:>> id=27 queueSize---->10
-Consumed:<< id=17 queueSize---->9
-Produced:>> id=28 queueSize---->10
-Consumed:<< id=18 queueSize---->9
-Produced:>> id=29 queueSize---->10
-Consumed:<< id=19 queueSize---->9
-Consumed:<< id=20 queueSize---->9
-Consumed:<< id=21 queueSize---->8
-Consumed:<< id=22 queueSize---->7
-Consumed:<< id=23 queueSize---->6
-Consumed:<< id=24 queueSize---->5
-Consumed:<< id=25 queueSize---->4
-Consumed:<< id=26 queueSize---->3
-Consumed:<< id=27 queueSize---->2
-Consumed:<< id=28 queueSize---->1
-Consumed:<< id=29 queueSize---->0
+Waiting for producer: 2sec        // Consumer waiting for the producer to produce an object into the Blocking Queue.
+Consumed:<< id=0 queueSize---->0
+Produced:>> id=1 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=1 queueSize---->0
+Produced:>> id=2 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=2 queueSize---->0
+Produced:>> id=3 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=3 queueSize---->0
+Produced:>> id=4 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=4 queueSize---->0
+Produced:>> id=5 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=5 queueSize---->0
+Produced:>> id=6 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=6 queueSize---->0
+Produced:>> id=7 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=7 queueSize---->0
+Produced:>> id=8 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=8 queueSize---->0
+Produced:>> id=9 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=9 queueSize---->0
+Produced:>> id=10 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=10 queueSize---->0
+Produced:>> id=11 queueSize---->0
+Waiting for producer: 1sec
+Consumed:<< id=11 queueSize---->0
+Produced:>> id=12 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=12 queueSize---->0
+Produced:>> id=13 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=13 queueSize---->0
+Produced:>> id=14 queueSize---->0
+Waiting for producer: 1sec
+Consumed:<< id=14 queueSize---->0
+Produced:>> id=15 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=15 queueSize---->0
+Produced:>> id=16 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=16 queueSize---->0
+Produced:>> id=17 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=17 queueSize---->0
+Produced:>> id=18 queueSize---->0
+Waiting for producer: 2sec
+Consumed:<< id=18 queueSize---->0
+Produced:>> id=19 queueSize---->0
+Waiting for producer: 1sec
+Consumed:<< id=19 queueSize---->0
