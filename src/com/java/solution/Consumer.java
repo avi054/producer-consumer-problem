@@ -14,8 +14,9 @@ public class Consumer implements Runnable {
 	public void run() {
 		while (true) {
 			try {
+				Thread.sleep(3000);
 				Employee employee = obj.take();
-					System.out.println("fast Consumer :" + employee);
+					System.out.println("Consumed:<< id="+ employee.getId() +" queueSize---->"+ obj.size());
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}

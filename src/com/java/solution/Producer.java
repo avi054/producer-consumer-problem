@@ -12,8 +12,10 @@ public class Producer implements Runnable {
 
 	@Override
 	public void run() {
-		for (int i = 0; i < 500; i++) {
+		for (int i = 0; i < 30; i++) {
 			try {
+				Thread.sleep(1000);
+				System.out.println("Produced:>> id="+ i +" queueSize---->"+ obj.size());
 				obj.put(new Employee(i, "name", 101, 201));
 			} catch (InterruptedException e) {
 				e.printStackTrace();

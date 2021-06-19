@@ -9,26 +9,26 @@ public class BlockingQueueProdConsumer {
 		BlockingQueue<Employee> queue = new ArrayBlockingQueue<>(10);
 		
 		Producer producer = new Producer(queue);//fast producer
-		SlowProducer producer2 = new SlowProducer(queue);
+//		SlowProducer producer2 = new SlowProducer(queue);
 		
 		Consumer consumer = new Consumer(queue);
-		SlowConsumer slowConsumer = new SlowConsumer(queue);
+//		SlowConsumer slowConsumer = new SlowConsumer(queue);
 		
 		Thread producerThread = new Thread(producer);
 		
-		Thread slowProducerThread = new Thread(producer2);
+//		Thread slowProducerThread = new Thread(producer2);
 		
 		Thread consumerThread = new Thread(consumer);
 		
-		Thread slowConsumerThread = new Thread(slowConsumer);
+//		Thread slowConsumerThread = new Thread(slowConsumer);
 
 		producerThread.start();
 		
-		slowProducerThread.start();// slow producer with delay of 5ms
+//		slowProducerThread.start();// slow producer with delay of 5ms
 		
 		consumerThread.start(); // fast consumer
 		
-		slowConsumerThread.start(); // slow consumer with delay of 5ms
+//		slowConsumerThread.start(); // slow consumer with delay of 5ms
 
 	}
 }

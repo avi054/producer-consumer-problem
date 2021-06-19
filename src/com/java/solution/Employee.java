@@ -19,4 +19,14 @@ public class Employee {
 		return "Employee [id=" + id + ", name=" + name + ", dept_id=" + dept_id + ", manger_id=" + manger_id + "]";
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	
+
 }
